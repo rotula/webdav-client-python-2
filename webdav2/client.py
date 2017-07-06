@@ -455,9 +455,9 @@ class Client(object):
                 options["URL"],
                 auth=(self.webdav.login, self.webdav.password),
                 headers=self.get_header('upload_file'),
-                data=buff
+                data=options["READFUNCTION"]()
             )
-            if request.status_code == 507:
+            if response.status_code == 507:
                 raise NotEnoughSpace()
 
             # request.close()
