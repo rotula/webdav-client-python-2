@@ -43,7 +43,7 @@ class Test(TestCommand):
         sys.exit(errno)
 
 setup(
-    name='webdavclient2',
+    name='webdavclient2-mgh',
     version=version,
     packages=find_packages(),
     requires=['python (>= 2.7.6)'],
@@ -51,7 +51,7 @@ setup(
     scripts=['wdc'],
     tests_require=['pytest', 'pyhamcrest', 'junit-xml', 'pytest-allure-adaptor'],
     cmdclass={'install': Install, 'test': Test},
-    description='WebDAV client, based on original package https://github.com/designerror/webdav-client-python but uses requests instead of PyCURL',
+    description='WebDAV client, based on original package https://github.com/designerror/webdav-client-python but uses requests instead of PyCURL, some minor bugs patched to make it workable for MGH purposes',
     long_description=open('README.rst').read(),
     author='Yuriy Homyakov',
     author_email='yuriy.homyakov@gmail.com',
